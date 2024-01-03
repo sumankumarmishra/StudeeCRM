@@ -1,5 +1,5 @@
 import Sidebar from "../../components/sidebar/Sidebar";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
 import "../../style/datatable.css";
@@ -8,19 +8,27 @@ import Widget from "../../components/widget/Widget";
 import { Table, Button, Pagination } from "react-bootstrap";
 import axios from "axios";
 
-const Home = () => {
+const Home = memo(function Home() {
   const role = localStorage.getItem("role");
   const token = localStorage.getItem("ieodkvToken");
   const [university_wise, setTotalUniWise] = useState([]);
   const [source_wise, setTotalSourceWise] = useState([]);
   const [current_desk_wise, setTotalCurrentDeskWise] = useState([]);
+  const [data, setData] = useState({
+    university_wise: [],
+    source_wise: [],
+    current_desk_wise: [],
+  });
 
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(6);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = university_wise.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = data.university_wise.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
   // const tokenCookie = document.cookie
   //   .split("; ")
   //   .find((row) => row.startsWith("ieodkvToken="));
@@ -40,40 +48,73 @@ const Home = () => {
   };
 
   useEffect(() => {
-    axios
-      .get(
-        "https://crm.internationaleducationoffice.co.uk/reports/university_wise",
-        config
-      )
-      .then((response) => {
-        setTotalUniWise(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    axios
-      .get(
-        "https://crm.internationaleducationoffice.co.uk/reports/source_wise",
-        config
-      )
-      .then((response) => {
-        setTotalSourceWise(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    axios
-      .get(
-        "https://crm.internationaleducationoffice.co.uk/reports/current_desk_wise",
-        config
-      )
-      .then((response) => {
-        setTotalCurrentDeskWise(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [university_wise, source_wise, current_desk_wise]);
+    const fetchData = async () => {
+      try {
+        const [data1, data2, data3] = await Promise.all([
+          axios.get(
+            "https://crm.internationaleducationoffice.co.uk/reports/university_wise",
+            config
+          ),
+          axios.get(
+            "https://crm.internationaleducationoffice.co.uk/reports/source_wise",
+            config
+          ),
+          axios.get(
+            "https://crm.internationaleducationoffice.co.uk/reports/current_desk_wise",
+            config
+          ),
+        ]);
+        setData({
+          university_wise: data1.data,
+          source_wise: data2.data,
+          current_desk_wise: data3.data,
+        });
+        // setTotalUniWise(data1.data);
+        // setTotalSourceWise(data2.data);
+        // setTotalCurrentDeskWise(data3.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    // axios
+    //   .get(
+    //     "https://crm.internationaleducationoffice.co.uk/reports/university_wise",
+    //     config
+    //   )
+    //   .then((response) => {
+    //     setTotalUniWise(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    // axios
+    //   .get(
+    //     "https://crm.internationaleducationoffice.co.uk/reports/source_wise",
+    //     config
+    //   )
+    //   .then((response) => {
+    //     setTotalSourceWise(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+    // axios
+    //   .get(
+    //     "https://crm.internationaleducationoffice.co.uk/reports/current_desk_wise",
+    //     config
+    //   )
+    //   .then((response) => {
+    //     setTotalCurrentDeskWise(response.data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  }, []);
 
   return (
     <div className="home">
@@ -179,7 +220,11 @@ const Home = () => {
             <div className="pagination-container ms-4">
               <Pagination>
                 {Array.from(
-                  { length: Math.ceil(university_wise.length / itemsPerPage) },
+                  {
+                    length: Math.ceil(
+                      data.university_wise.length / itemsPerPage
+                    ),
+                  },
                   (_, index) => (
                     <Pagination.Item
                       key={index}
@@ -207,7 +252,7 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                {current_desk_wise.map((current_desk, index) => (
+                {data.current_desk_wise.map((current_desk, index) => (
                   <tr key={index}>
                     <td>{current_desk.name}</td>
                     <td>{current_desk.length}</td>
@@ -246,7 +291,7 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                {source_wise.map((source, index) => (
+                {data.source_wise.map((source, index) => (
                   <tr key={index}>
                     <td>{source.name}</td>
                     <td>{source.length}</td>
@@ -259,6 +304,6 @@ const Home = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Home;

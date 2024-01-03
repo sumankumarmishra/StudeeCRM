@@ -117,7 +117,6 @@ const DatatableBranches = () => {
   }, []);
   useEffect(() => {
     if (country) {
-      console.log(country);
       axios
         .get(
           "https://crm.internationaleducationoffice.co.uk/core-settings/city",

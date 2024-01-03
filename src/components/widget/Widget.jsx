@@ -8,9 +8,11 @@ import CountUp from "react-countup";
 import { CircularProgress } from "@material-ui/core";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { debounce } from "lodash";
 
 const Widget = ({ type, background_color }) => {
   const [totalApplications, setTotalApplications] = useState();
+  const [total, setTotal] = useState({});
   const [totalStudents, setTotalStudents] = useState();
   const [totalUniversities, setTotalUniversities] = useState();
   const [totalCities, setTotalCities] = useState();
@@ -28,6 +30,27 @@ const Widget = ({ type, background_color }) => {
       Authorization: `Bearer ${token}`,
     },
   };
+
+  const debouncedSubmit = debounce(() => {
+    axios
+      .get(
+        "https://crm.internationaleducationoffice.co.uk/reports/dashboard",
+        config
+      )
+      .then((response) => {
+        setTotalApplications(response.data.applications);
+        setTotalCities(response.data.cities);
+        setTotalSubAgents(response.data.subAgents);
+        setTotalCountries(response.data.countries);
+        setTotalPrograms(response.data.programs);
+        setTotalStaff(response.data.staff);
+        setTotalUniversities(response.data.universities);
+        setTotalStudents(response.data.students);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, 500);
 
   const handleUpload = () => {
     axios
@@ -57,35 +80,10 @@ const Widget = ({ type, background_color }) => {
   };
 
   let data;
+
   useEffect(() => {
-    axios
-      .get(
-        "https://crm.internationaleducationoffice.co.uk/reports/dashboard",
-        config
-      )
-      .then((response) => {
-        setTotalApplications(response.data.applications);
-        setTotalCities(response.data.cities);
-        setTotalSubAgents(response.data.subAgents);
-        setTotalCountries(response.data.countries);
-        setTotalPrograms(response.data.programs);
-        setTotalStaff(response.data.staff);
-        setTotalUniversities(response.data.universities);
-        setTotalStudents(response.data.students);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [
-    totalPrograms,
-    totalCities,
-    totalCountries,
-    totalStudents,
-    totalStaff,
-    totalSubAgents,
-    totalApplications,
-    totalUniversities,
-  ]);
+    debouncedSubmit();
+  }, []);
 
   switch (type) {
     case "students":
