@@ -1,0 +1,77 @@
+.main-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-settings {
+  border: 1px solid #603392;
+  padding: 30px;
+  width: 50%;
+  margin: 20px;
+}
+.input-setting {
+  width: 100px;
+  margin: 0px 20px;
+}
+
+.radio-button-group {
+  font-family: Arial, sans-serif;
+}
+
+.radio-button {
+  position: relative;
+  padding-left: 40px; /* Adjust the padding value to add space */
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.radio-button input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgba(53, 51, 51, 0.822);
+}
+
+.radio-button input:checked ~ .checkmark {
+  background-color: #603392;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-button input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-button .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 12px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.btn-settings {
+  width: 100px;
+  color: white;
+  background-color: #603392;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+}

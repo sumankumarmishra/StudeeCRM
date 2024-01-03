@@ -1,0 +1,109 @@
+.emails-main {
+  margin: 10px;
+}
+.emails-grid {
+  display: flex;
+}
+.email-form {
+  margin: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.email-from,
+.email-subject,
+.email-html {
+  width: 100%;
+}
+.email-to-select {
+  width: 20%;
+}
+.email-to-input {
+  width: 80%;
+}
+
+.email-btn {
+  width: 100%;
+}
+.btn-compose {
+  border: 1px solid black;
+  background-color: #603392;
+  color: white;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 5px;
+  cursor: pointer;
+}
+.option-set {
+  width: 90px;
+  cursor: pointer;
+}
+
+.email-head {
+  display: flex;
+  justify-content: space-between;
+}
+.email-options-list {
+  display: flex;
+}
+.email-options {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.email-option-select {
+  color: rgb(83, 180, 209);
+}
+
+.notseen-email {
+  background-color: rgb(194, 199, 202);
+}
+.option-heading {
+  cursor: pointer;
+}
+.option-active {
+  cursor: pointer;
+  color: blue;
+}
+.all-emails-list {
+  border: 1px solid black;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.email-list {
+  width: 30%;
+  border: 1px solid black;
+  min-height: 80vh;
+}
+
+.all-emails {
+  width: 20%;
+  border: 1px solid black;
+  min-height: 80vh;
+}
+p {
+  color: black;
+}
+.email-view {
+  width: 50%;
+  border: 1px solid black;
+  min-height: 80vh;
+  padding: 10px;
+}
+
+.individual-header {
+  padding: 5px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}

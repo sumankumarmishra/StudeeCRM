@@ -1,0 +1,79 @@
+.modalGuide {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.336);
+  z-index: 13;
+}
+.modalInnerGuide {
+  width: 60%;
+  z-index: 112;
+  height: 90%;
+  position: relative;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 1px solid #603392;
+  background-color: white;
+}
+.modalInnerGuideName {
+  z-index: 13243;
+  position: relative;
+  border: 1px solid #603392;
+  background-color: white;
+}
+
+.inputGuideName {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0px;
+}
+.inputAddGuideName {
+  padding: 10px;
+  margin: 10px 0px;
+}
+.inputGuide {
+  padding: 10px;
+  margin: 10px 0px;
+}
+.addButton {
+  /* width: 20%; */
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #603392;
+  cursor: pointer;
+}
+.headingForm {
+  border: 1px solid rgba(163, 162, 162, 0.712);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.headingContent {
+  border: 1px solid rgba(163, 162, 162, 0.712);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.htmlContent {
+  width: 55%;
+  margin: 10px 0px;
+}
+.editUpdate{
+  position: absolute;
+  right: 80px;
+}
+.headingUpdateContent{
+  margin: 20px 10px;
+}

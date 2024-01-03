@@ -1,0 +1,25 @@
+.navbar {
+  height: 70px;
+  background-color: white; /* Background color */
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  // display: flex;
+  // align-items: center;
+  font-size: 14px;
+  color: white; /* Text color */
+    width: 100%;
+  .wrapper-search {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; /* Right-align items */
+    align-items: center; /* Vertically center items */
+    flex: 1; /* Allow the wrapper to expand and push content to the right */
+
+    p {
+      font-size: 16px; /* Increase font size */
+      font-weight: bold; /* Add bold font weight if desired */
+      margin-right: 10px; /* Add right margin for spacing */
+     
+    }
+    
+  }
+}

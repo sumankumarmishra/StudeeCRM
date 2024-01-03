@@ -1,0 +1,41 @@
+.input-programs {
+  margin: 10px 0px;
+  padding: 10px;
+  width: 40%;
+}
+.modal-programs {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.336);
+  z-index: 1;
+}
+.modalInner-programs {
+  z-index: 1;
+  position: relative;
+  border: 1px solid #603392;
+  background-color: white;
+  width: 60%;
+  height: 90%;
+  overflow-x: scroll;
+}
+.allPrograms {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+}
+.dataProgram {
+  color: black;
+}
+.splash {
+  justify-content: space-between;
+}
+.splash-uni {
+  justify-content: space-between;
+  width: 30%;
+}

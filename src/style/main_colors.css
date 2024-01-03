@@ -1,0 +1,61 @@
+/* BG COLORS */
+.red_bg_logo {
+  background-color: #e32028;
+}
+.green_bg_logo {
+  background-color: #2f9444;
+}
+.orange_bg_logo {
+  background-color: #f38f1f;
+}
+.blue_bg_logo {
+  background-color: #33a1d4;
+}
+.yellow_bg_logo {
+  background-color: #c1d130;
+}
+.black_bg_logo {
+  background-color: #1a1a1a;
+}
+
+/* Colors */
+.red_logo {
+  color: #e32028;
+}
+.green_logo {
+  color: #2f9444;
+}
+.orange_logo {
+  color: #f38f1f;
+}
+.blue_logo {
+  color: #33a1d4;
+}
+.yellow_logo {
+  color: #c1d130;
+}
+.black_logo {
+  color: #1a1a1a;
+}
+
+/* App.css */
+.footer_cloud_lab {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #cdcdcd; /* Change the background color to your preference */
+  color: black; /* Change the text color to your preference */
+  padding: 10px; /* Adjust the padding as needed */
+  text-align: center;
+  z-index: 999; /* Set a higher z-index */
+  font-weight: bold;
+}
+
+.footer_cloud_lab a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.esterik {
+  color: red;
+}

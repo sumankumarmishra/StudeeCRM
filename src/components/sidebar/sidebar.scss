@@ -1,0 +1,121 @@
+.sidebar {
+  flex: 1;
+  min-height: 100vh;
+  // background-color: #dddde0;
+  background: #3c4142;
+  width: 15%;
+  
+  .top {
+    height: 70px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    margin: 25px 0px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      border: 10px solid;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #494ca2;
+      margin-left: 5px;
+    }
+  }
+
+  .break-sidebar {
+    height: 1px;
+    width: 70px;
+    border: 1px solid white;
+    background-color: white;
+  }
+
+  .center {
+    padding-left: 10px;
+
+    .textfield {
+      font-size: 15px;
+      margin-left: 20px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .title {
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+        padding: 10px;
+
+        .custom-icon {
+          margin-left: 20px;
+          color:white;
+        }
+        &:hover {
+          background-color: rgb(239, 239, 239);
+          color: black; /* Change text color to black on hover */
+          transition: 0.2s ease-in;
+          .title {
+            color: black;
+          }
+          .textfield {
+            color: black;
+          }
+          .icon {
+            color: #4892C3 !important; /* Change icon color to black on hover */
+          }
+          .custom-icon {
+            color: black;
+          }
+        }
+
+        .icon {
+          font-size: 25px;
+          color: white;
+        }
+
+        span {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: white;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid #494ca2;
+      cursor: pointer;
+      margin: 5px;
+
+      &:nth-child(1) {
+        background-color: whitesmoke;
+      }
+      &:nth-child(2) {
+        background-color: #333;
+      }
+      &:nth-child(3) {
+        background-color: darkblue;
+      }
+    }
+  }
+}

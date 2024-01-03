@@ -1,0 +1,20 @@
+.input-member {
+  margin: 10px 0px;
+  padding: 20px;
+}
+.update-member {
+  margin: 10px 0px;
+  width: 160%;
+  padding: 10px;
+}
+
+.add-dynamic-permission {
+  cursor: pointer;
+}
+.dynamic-form {
+  margin: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

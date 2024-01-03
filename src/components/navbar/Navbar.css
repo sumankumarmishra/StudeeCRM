@@ -1,0 +1,58 @@
+
+.dropdownprofile{
+    position: absolute;
+    color: black;
+    top: 0.5rem;
+    right: 4rem;
+    width: 120px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.navbar .btn12{
+    background-color: white;
+    color: black;
+    width: auto;
+    border: none;
+}
+
+.navbar .dropdown1{
+    background-color: white;
+    
+}
+
+.navbar .calender1{
+    background-color: #2F9444;
+    border: none;
+}
+/* .navbar .calender1:hover{
+    background-color: white;
+    color: black;
+} */
+
+.navbar .calender2{
+    background-color: #F38F1F;
+    border: none;
+}
+
+.navbar .calender3{
+    background-color: #33A1D4;
+    border: none;
+}
+
+.navbar .calender5{
+    background-color: #E32028;
+    border: none;
+}
+
+.navbar .count-tag{
+    position: absolute;
+    top: -5px;
+    background-color: red;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+

@@ -1,0 +1,251 @@
+.datatable {
+  height: 620px;
+  padding: 20px;
+  width: 100%;
+
+ 
+}
+.tabledata {
+  height: 420px;
+  width: 50%;
+  padding: 20px;
+}
+.datatableTitleHistory {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.datatableTitle {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link-new {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cellWithImg {
+  display: flex;
+  align-items: center;
+}
+
+.cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.search-bar input{
+  width: 24%;
+}
+
+.cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+}
+.active {
+  background-color: rgba(0, 128, 0, 0.05);
+  color: green;
+}
+.pending {
+  background-color: rgba(255, 217, 0, 0.05);
+  color: goldenrod;
+}
+.passive {
+  background-color: rgba(255, 0, 0, 0.05);
+  color: crimson;
+}
+
+.cellAction {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.viewButton {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.deleteButton {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 20px;
+}
+.cellWrapper {
+  display: flex;
+  align-items: center;
+}
+.image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.status {
+  padding: 5px;
+  border-radius: 5px;
+}
+.Approved {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.151);
+}
+.Pending {
+  color: goldenrod;
+  background-color: rgba(189, 189, 3, 0.103);
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.336);
+}
+.Popupmodal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.336);
+}
+
+.modalInner {
+  z-index: 1;
+  position: relative;
+  border: 1px solid black;
+  background-color: white;
+}
+.popupInner {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.closeModal {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 300;
+  cursor: pointer;
+  color: black;
+}
+.modalText {
+  font-size: 30;
+  color: black;
+}
+
+.category-new {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-form {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+}
+
+.createButton {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 10px;
+}
+.datagrid {
+  border: 1px solid black;
+}
+.modalOrder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 2000;
+  margin: 0px 20px;
+}
+
+.modalTable {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 300px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+.borderModal {
+  border-bottom: 1px solid black;
+  padding: 20px 0px;
+}
+.rowInfo {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 400;
+}
+.img {
+  border-radius: 90px;
+  margin-right: 20px;
+}
+.idnumber {
+  margin-right: 20px;
+}
+.textWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.totalText {
+  margin-left: 20px;
+  color: black;
+}
+.statusPending {
+  margin-left: 20px;
+  color: red;
+}
+.statusCompleted {
+  margin-left: 20px;
+  color: green;
+}
+.total {
+  margin-left: 20px;
+  color: black;
+  font-weight: bold;
+}

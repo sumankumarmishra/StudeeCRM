@@ -1,0 +1,62 @@
+.form-fields {
+  width: 30%;
+  margin: 20px;
+}
+.input-form {
+  height: 100px;
+}
+
+.form-element {
+  background-color: rgb(236, 181, 108);
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: 5px 0px;
+}
+.remove-element-button {
+  cursor: pointer;
+}
+.formStyling {
+  display: flex;
+  border: 1px solid rgb(216, 208, 208);
+  height: 60vh;
+}
+.dragHere {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.dragThis {
+  margin-left: 40px;
+  width: 30%;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.field {
+  border: 1px solid rgb(224, 220, 220);
+  background-color: rgba(224, 220, 220, 0.74);
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fieldInputs {
+  display: flex;
+  flex-direction: column;
+}
+.fieldInputs label {
+  font-size: 15px;
+  text-align: center;
+}
+.fieldInputs input {
+  padding: 5px;
+}
+.formnameInput {
+  width: 30%;
+  margin-top: 30px;
+}
